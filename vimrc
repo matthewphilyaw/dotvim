@@ -164,19 +164,6 @@ set nocompatible
 " }
 
 
-" Tabs {
-
-    "Give you the familiar Ctrl+N in normal model to create a new tab. 
-    ":tabs can list out the tabs and :tabn # to switch to a specific tab
-    no <C-n> :tabnew<cr>    
-
-    "Ctrl+Tab to cycle forward through your tabs. use :tabPrevious to
-    "cycle backwards.
-    no <C-tab> :tabNext<cr>
-
-" }
-
-
 " Styling {
 
     " Show us where the cursor is in the bottom lower right
@@ -234,7 +221,9 @@ set nocompatible
 
     " Look for a ctags file starting in current directory and 
     " working all the way up to root
-    set tags=tags;/
+    set tags=.tags;/
+
+    nnoremap <leader>b :make<cr>
 
 " }
 
@@ -259,10 +248,10 @@ set nocompatible
     " Use 'ctags -R' at your project root to generate tags.
     " Or add it to your build script
 
-    " Since <leader>t is used to run tests lets map the tag list
+    " Since <leader>t is used for Command-T, lets map the tag list
     " to <leader>c for code tags (ctags). This will have it open
     " take focus and close once we have picked a tag
-    map <leader>c :NERDTreeClose<cr>:TagbarToggle<cr>
+    map <leader>c :TagbarToggle<cr>
 
 " }
 
