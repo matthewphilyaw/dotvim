@@ -28,3 +28,6 @@
 [submodule "vim/bundle/colorschemes"]
 	path = vim/bundle/colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "vim/bundle/vimroom"]
+	path = vim/bundle/vimroom
+	url = https://github.com/mikewest/vimroom.git
