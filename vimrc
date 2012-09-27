@@ -35,11 +35,9 @@ set nocompatible
 
     " For convenience, when we write changes to our vim profile
     " auto load them back into our vim session.
-    if has('autocmd')
-        autocmd bufwritepost .vimrc source $MYVIMRC
-        " for windows
-        autocmd bufwritepost _vimrc source $MYVIMRC
-    endif
+    autocmd bufwritepost .vimrc source $MYVIMRC
+    " for windows
+    autocmd bufwritepost _vimrc source $MYVIMRC
     
     " VIM will try to determine the filetype and setup extra settings
     " This will not work with compability mode on.
@@ -53,8 +51,6 @@ set nocompatible
     " Use the filetype to determine indention schemes
     filetype indent on
 
-
-    " If VIM has been compiled with unicode support then lets use it
     " Taken from: http://vim.wikia.com/wiki/Working_with_Unicode
     if has("multi_byte")
         " termencoding is the encoding the keyboard input will be
@@ -75,25 +71,15 @@ set nocompatible
         " when reading a file try to match the byte order mark of the
         " file, otherwise try utf-8, finally just plain ascii
         set fileencodings=ucs-bom,utf-8,latin1
-    endif 
+    endif
 
     " Remember a lot of commands so we can always find that 
     " one that worked
     set history=1000
 
-    " Remap the tab key to do autocompletion or 
-    " indentation depending on the context 
-    " from http://www.vim.org/tips/tip.php?tip_id=102
-    function! InsertTabWrapper()
-        let col = col('.') - 1
-        if !col || getline('.')[col - 1] !~ '\k'
-            return "\<tab>"
-        else
-            return "\<c-p>"
-        endif
-    endfunction
-    inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-    inoremap <s-tab> <c-n>
+    " file globs for VIM to ignore when trying to provide 
+    " file/directory completions
+    set wildignore=*.o,*.so,*.pyc,*.beam
 
 " }
 
@@ -223,7 +209,7 @@ set nocompatible
     " working all the way up to root
     set tags=.tags;/
 
-    nnoremap <leader>b :make<cr>
+    nnoremap <leader>m :make<cr>
 
 " }
 
@@ -236,7 +222,7 @@ set nocompatible
     map <leader>f :NERDTreeToggle<cr>
 
     " Setup some file ignores
-    let NERDTreeIgnore=['\.pyc$', '\.beam$']
+    let NERDTreeIgnore=['\.pyc$', '\.beam$', '\.o', '\.so']
 
 " }
 
@@ -251,7 +237,7 @@ set nocompatible
     " Since <leader>t is used for Command-T, lets map the tag list
     " to <leader>c for code tags (ctags). This will have it open
     " take focus and close once we have picked a tag
-    map <leader>c :TagbarToggle<cr>
+    map <leader>c :TagbarOpenAutoClose<cr>
 
 " }
 
