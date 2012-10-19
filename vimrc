@@ -93,7 +93,7 @@ set background=dark
     " Broken down into easily includeable segments
     set statusline=%<%f\    " Filename
     set statusline+=%w%h%m%r " Options
-    set statusline+=%{fugitive#statusline()} "  Git Hotness
+    "set statusline+=%{fugitive#statusline()} "  Git Hotness
     set statusline+=\ [%{&ff}/%Y]            " filetype
     set statusline+=\ [%{getcwd()}]          " current dir
     set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
@@ -123,9 +123,9 @@ let NERDTreeIgnore=['\.pyc', '\.beam', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg
 
 map <leader>c :TagbarOpenAutoClose<cr>
 
-let g:ctrlp_custom_ignore = {
-            \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-            \ 'file': '\.beam$|\.exe$\|\.so$\|\.dll$' }
+let g:ctrlp_custom_ignore = { 
+    \ 'dir':  'ebin$\|\.git$\|\.hg$\|\.svn$', 
+    \ 'file': '\.beam$\|\.exe$\|\.so$\|\.dll$' }
 
 " neocomplcache {
     let g:neocomplcache_enable_at_startup = 1
@@ -182,15 +182,14 @@ let g:ctrlp_custom_ignore = {
     autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
     autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
     autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+    autocmd FileType erlang setlocal omnifunc=erlang_complete#Complete
 
     " Enable heavy omni completion.
     if !exists('g:neocomplcache_omni_patterns')
         let g:neocomplcache_omni_patterns = {}
     endif
-    let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
-    let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
     let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-    let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+    let g:neocomplcache_omni_patterns.erlang = '\%(\h\w*:\)*\h\w\|\h[[:alnum:]_@]*'
 
     " For snippet_complete marker.
     if has('conceal')
