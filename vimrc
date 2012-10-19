@@ -1,8 +1,12 @@
 set nocompatible
 
+if has('win32') || has('win64')
+    set runtimepath=$HOME/.vim,$VIMRUNTIME,$HOME/.vim/after
+endif
+
 filetype on
 filetype off
-set rtp+=~/.vim/bundle/vundle
+set rtp+=$HOME/.vim/bundle/vundle
 call vundle#rc()
 
 set background=dark
@@ -16,12 +20,8 @@ set background=dark
 
 " System {
 
-    if has('win32') || has('win64')
-        set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-    endif
-
     autocmd bufwritepost .vimrc source $MYVIMRC
-    autocmd bufwritepost _vimrc source $MYVIMRC
+    autocmd bufwritepost vimrc source $MYVIMRC
 
     filetype on
     filetype plugin on
@@ -93,7 +93,7 @@ set background=dark
     " Broken down into easily includeable segments
     set statusline=%<%f\    " Filename
     set statusline+=%w%h%m%r " Options
-    set statusline+=%{fugitive#statusline()} "  Git Hotness
+    "set statusline+=%{fugitive#statusline()} "  Git Hotness
     set statusline+=\ [%{&ff}/%Y]            " filetype
     set statusline+=\ [%{getcwd()}]          " current dir
     set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
