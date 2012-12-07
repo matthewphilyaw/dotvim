@@ -20,7 +20,7 @@ if executable('ctags')
 endif
 
 Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neocomplcache-snippets-complete'
+Bundle 'Shougo/neosnippet'
 Bundle 'honza/snipmate-snippets'
 
 " JavaScript
@@ -36,3 +36,8 @@ Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'tpope/vim-markdown'
 
 Bundle 'jimenezrick/vimerl'
+
+" go-lang support
+Bundle 'jnwhiteh/vim-golang'
+
+Bundle 'tomasr/molokai'
