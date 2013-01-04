@@ -39,5 +39,3 @@ Bundle 'jimenezrick/vimerl'
 
 " go-lang support
 Bundle 'jnwhiteh/vim-golang'
-
-Bundle 'tomasr/molokai'
