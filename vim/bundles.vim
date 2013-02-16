@@ -36,3 +36,4 @@ Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'tpope/vim-markdown'
 
 Bundle 'jimenezrick/vimerl'
+Bundle 'elixir-lang/vim-elixir'

@@ -179,17 +179,14 @@ let g:ctrlp_custom_ignore = {
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
     autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
     autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
     autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-    autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-    autocmd FileType erlang setlocal omnifunc=erlang_complete#Complete
 
     " Enable heavy omni completion.
     if !exists('g:neocomplcache_omni_patterns')
         let g:neocomplcache_omni_patterns = {}
     endif
     let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-    let g:neocomplcache_omni_patterns.erlang = '\%(\h\w*:\)*\h\w\|\h[[:alnum:]_@]*'
+    let g:neocomplcache_omni_patterns.erlang = '\%:\h\w*'
 
     " For snippet_complete marker.
     if has('conceal')
