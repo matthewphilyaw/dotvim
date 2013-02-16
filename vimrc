@@ -103,6 +103,7 @@ set background=dark
     colorscheme molokai 
 
     if has('gui_running')
+        set lines=50 columns=95
     else
         if &term == 'xterm' || &term == 'screen'
             set t_Co=256
@@ -129,15 +130,10 @@ let g:ctrlp_custom_ignore = {
 
 " neocomplcache {
     let g:neocomplcache_enable_at_startup = 1
-    let g:neocomplcache_enable_camel_case_completion = 1
-    let g:neocomplcache_enable_smart_case = 1
-    let g:neocomplcache_enable_underbar_completion = 1
     let g:neocomplcache_min_syntax_length = 3
-    let g:neocomplcache_enable_auto_delimiter = 1
-    let g:neocomplcache_max_list = 15
-    let g:neocomplcache_auto_completion_start_length = 3
-    let g:neocomplcache_force_overwrite_completefunc = 1
+    let g:neocomplcache_max_list = 10
     let g:neocomplcache_snippets_dir='~/.vim/bundle/snipmate-snippets/snippets'
+<<<<<<< HEAD
 
     " AutoComplPop like behavior.
     let g:neocomplcache_enable_auto_select = 0
@@ -193,4 +189,6 @@ let g:ctrlp_custom_ignore = {
         set conceallevel=2 concealcursor=i
     endif
 
+=======
+>>>>>>> 36c2a8dbaab1fa96c0bc5a1117e6861139753afb
 " }
