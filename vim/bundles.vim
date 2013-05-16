@@ -21,13 +21,11 @@ endif
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
-Bundle 'honza/snipmate-snippets'
 
 " JavaScript
 Bundle 'leshill/vim-json'
 Bundle 'groenewege/vim-less'
 Bundle 'pangloss/vim-javascript'
-Bundle 'briancollins/vim-jst'
 
 " HTML
 Bundle 'amirh/HTML-AutoCloseTag'
