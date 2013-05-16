@@ -52,7 +52,6 @@ set background=dark
     set expandtab
     set backspace=indent,eol,start
     set foldmethod=syntax
-    nnoremap <space> za<space>
     set nofoldenable
     set undolevels=1000
     set pastetoggle=<F2>
@@ -86,11 +85,9 @@ set background=dark
     set number
 
     set showmode
-    set cursorline
 
     set laststatus=2
 
-    " Broken down into easily includeable segments
     set statusline=%<%f\    " Filename
     set statusline+=%w%h%m%r " Options
     "set statusline+=%{fugitive#statusline()} "  Git Hotness
@@ -109,6 +106,14 @@ set background=dark
             set t_Co=256
         endif
     endif
+
+    if has("gui_macvim")
+          set guifont=Menlo
+      elseif has("gui_running")
+        set guifont=Consolas
+    endif
+
+    set guioptions-=mTrRlL  "menu bar, toolbard, right scroll, left scroll
 
 " }
 
