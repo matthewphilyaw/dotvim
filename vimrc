@@ -113,7 +113,12 @@ set background=dark
         set guifont=Consolas
     endif
 
-    set guioptions-=mTrRlL  "menu bar, toolbard, right scroll, left scroll
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=R
+    set guioptions-=l
+    set guioptions-=L
 
 " }
 
@@ -132,28 +137,3 @@ map <leader>c :TagbarOpenAutoClose<cr>
 let g:ctrlp_custom_ignore = { 
     \ 'dir':  'ebin$\|\.git$\|\.hg$\|\.svn$', 
     \ 'file': '\.beam$\|\.exe$\|\.so$\|\.dll$' }
-
-" neocomplcache {
-
-    let g:neocomplcache_enable_at_startup = 1
-    let g:neocomplcache_min_syntax_length = 3
-    let g:neocomplcache_max_list = 10
-
-    " AutoComplPop like behavior.
-    let g:neocomplcache_enable_auto_select = 0
-
-
-    " <CR>: close popup
-    " <s-CR>: close popup and save indent.
-    inoremap <expr><s-CR> pumvisible() ? neocomplcache#close_popup()"\<CR>" : "\<CR>"
-    inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-
-    " <TAB>: completion.
-    inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-    inoremap <expr><s-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
-
-    " <C-h>, <BS>: close popup and delete backword char.
-    inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-    inoremap <expr><C-y>  neocomplcache#close_popup()
-
-" }

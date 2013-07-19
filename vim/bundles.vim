@@ -13,14 +13,11 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'Valloric/YouCompleteMe'
 
 if executable('ctags')
     Bundle 'majutsushi/tagbar'
 endif
-
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neosnippet'
 
 " JavaScript
 Bundle 'leshill/vim-json'
