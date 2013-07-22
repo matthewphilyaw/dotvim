@@ -6,6 +6,10 @@ if executable('ack')
     Bundle 'mileszs/ack.vim'
 endif
 
+if executable('ag')
+    Bundle 'rking/ag.vim'
+endif
+
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim'
@@ -36,3 +40,5 @@ Bundle 'elixir-lang/vim-elixir'
 
 " go-lang support
 Bundle 'jnwhiteh/vim-golang'
+
+Bundle 'Floobits/floobits-vim'
