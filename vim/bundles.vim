@@ -2,6 +2,16 @@ Bundle 'gmarik/vundle'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'myusuf3/numbers.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'Valloric/YouCompleteMe'
+
 if executable('ack')
     Bundle 'mileszs/ack.vim'
 endif
@@ -9,15 +19,6 @@ endif
 if executable('ag')
     Bundle 'rking/ag.vim'
 endif
-
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-surround'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'Valloric/YouCompleteMe'
 
 if executable('ctags')
     Bundle 'majutsushi/tagbar'
