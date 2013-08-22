@@ -24,6 +24,8 @@ if executable('ctags')
     Bundle 'majutsushi/tagbar'
 endif
 
+Bundle 'bjoernricks/vim-cmake'
+
 " JavaScript
 Bundle 'leshill/vim-json'
 Bundle 'groenewege/vim-less'

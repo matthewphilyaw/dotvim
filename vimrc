@@ -130,10 +130,10 @@ set background=dark
 " }
 
 map <leader>f :NERDTreeToggle<cr>
-let NERDTreeIgnore=['\.pyc', '\.beam', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+let NERDTreeIgnore=['\.pyc', '\.beam', '\.o', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 
 map <leader>c :TagbarOpenAutoClose<cr>
 
 let g:ctrlp_custom_ignore = { 
-    \ 'dir':  'ebin$\|\.git$\|\.hg$\|\.svn$', 
-    \ 'file': '\.beam$\|\.exe$\|\.so$\|\.dll$' }
+    \ 'dir':  'obj$\|build$\|ebin$\|\.git$\|\.hg$\|\.svn$', 
+    \ 'file': '\.beam$\|\.exe$\|\.so$\|\.dll$\|\.o$' }
