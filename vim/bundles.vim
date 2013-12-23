@@ -11,6 +11,7 @@ Bundle 'flazz/vim-colorschemes'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'kien/rainbow_parentheses.vim'
 
 if executable('ack')
     Bundle 'mileszs/ack.vim'
