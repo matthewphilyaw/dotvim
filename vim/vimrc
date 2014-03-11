@@ -29,6 +29,7 @@ set background=dark
     scriptencoding utf-8
 
     set history=1000
+    set tags=./tags;/,~/.vimtags
     nnoremap <leader>b :make<cr>
 
 " }
@@ -40,7 +41,7 @@ set background=dark
     set hlsearch 
     set ignorecase
     set smartcase
-    nnoremap <cr> :noh<cr><cr>
+    nnoremap <c-c> :noh<cr>
 
 " }
 
@@ -67,7 +68,7 @@ set background=dark
 
 " Buffers {
 
-    no <C-h> <C-w>h  
+    no <C-h> <C-w>h
     no <C-j> <C-w>j
     no <C-k> <C-w>k
     no <C-l> <C-w>l
@@ -79,25 +80,14 @@ set background=dark
 
 " Styling {
 
-    set ruler
-    set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
+    syntax enable
+    colorscheme molokai
+
     set showcmd
+    set showmode
     set number
 
-    set showmode
-
     set laststatus=2
-
-    set statusline=%<%f\    " Filename
-    set statusline+=%w%h%m%r " Options
-    "set statusline+=%{fugitive#statusline()} "  Git Hotness
-    set statusline+=\ [%{&ff}/%Y]            " filetype
-    set statusline+=\ [%{getcwd()}]          " current dir
-    set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-
-    syntax enable
-
-    colorscheme molokai 
 
     if has('gui_running')
         set lines=50 columns=95
@@ -122,12 +112,6 @@ set background=dark
 
 " }
 
-
-" CTags {
-
-   set tags=./tags;/,~/.vimtags
-
-" }
 
 map <leader>f :NERDTreeToggle<cr>
 let NERDTreeIgnore=['\.pyc', '\.beam', '\.o', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']

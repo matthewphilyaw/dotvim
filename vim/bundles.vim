@@ -2,16 +2,19 @@ Bundle 'gmarik/vundle'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'myusuf3/numbers.vim'
+Bundle 'kien/rainbow_parentheses.vim'
+
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+Bundle 'SirVer/ultisnips'
 Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'kien/rainbow_parentheses.vim'
+
+Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
+Bundle 'bling/vim-airline'
 
 if executable('ack')
     Bundle 'mileszs/ack.vim'
@@ -27,22 +30,15 @@ endif
 
 Bundle 'bjoernricks/vim-cmake'
 
-" JavaScript
 Bundle 'leshill/vim-json'
-Bundle 'groenewege/vim-less'
 Bundle 'pangloss/vim-javascript'
 
-" HTML
 Bundle 'amirh/HTML-AutoCloseTag'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
+Bundle 'groenewege/vim-less'
 
 Bundle 'tpope/vim-markdown'
+Bundle 'mustache/vim-mustache-handlebars'
 
-" Erlang
 Bundle 'jimenezrick/vimerl'
 Bundle 'elixir-lang/vim-elixir'
-
-" go-lang support
-Bundle 'jnwhiteh/vim-golang'
-
-Bundle 'Floobits/floobits-vim'
