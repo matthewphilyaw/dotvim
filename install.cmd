@@ -1,7 +1,6 @@
 set dotvimdir=%CD%
 
 chdir %HOME%
-mklink .vimrc %dotvimdir%\vimrc
 mklink /D .vim %dotvimdir%\vim
 chdir %dotvimdir%
 
