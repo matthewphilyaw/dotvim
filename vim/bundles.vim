@@ -8,9 +8,12 @@ Bundle 'kien/rainbow_parentheses.vim'
 
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-dispatch'
 Bundle 'SirVer/ultisnips'
 Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'rdnetto/YCM-Generator'
+Bundle 'gilligan/vim-lldb'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
@@ -32,6 +35,7 @@ Bundle 'bjoernricks/vim-cmake'
 
 Bundle 'leshill/vim-json'
 Bundle 'pangloss/vim-javascript'
+Bundle 'kchmck/vim-coffee-script'
 
 Bundle 'amirh/HTML-AutoCloseTag'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
@@ -42,3 +46,5 @@ Bundle 'mustache/vim-mustache-handlebars'
 
 Bundle 'jimenezrick/vimerl'
 Bundle 'elixir-lang/vim-elixir'
+
+Plugin 'wting/rust.vim'

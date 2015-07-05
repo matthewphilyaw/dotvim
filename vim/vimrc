@@ -41,15 +41,15 @@ set background=dark
     set hlsearch 
     set ignorecase
     set smartcase
-    nnoremap <c-c> :noh<cr>
+    nnoremap <c-c> :noh<cr><c-c>
 
 " }
 
 
 " Editing {
 
-    set tabstop=4
-    set shiftwidth=4
+    set tabstop=2
+    set shiftwidth=2
     set expandtab
     set backspace=indent,eol,start
     set foldmethod=syntax
