@@ -4,11 +4,6 @@ if has('win32') || has('win64')
     set runtimepath=$HOME/.vim,$VIMRUNTIME,$HOME/.vim/after
 endif
 
-filetype on
-filetype off
-set rtp+=$HOME/.vim/bundle/vundle
-call vundle#rc()
-
 set background=dark
 
 " Bundles {

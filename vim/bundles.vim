@@ -1,3 +1,10 @@
+set nocompatible
+
+filetype on
+filetype off
+set rtp+=$HOME/.vim/bundle/vundle
+call vundle#rc()
+
 Bundle 'gmarik/vundle'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
