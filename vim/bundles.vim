@@ -20,7 +20,6 @@ Bundle 'SirVer/ultisnips'
 Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'rdnetto/YCM-Generator'
-Bundle 'gilligan/vim-lldb'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
@@ -36,6 +35,10 @@ endif
 
 if executable('ctags')
     Bundle 'majutsushi/tagbar'
+endif
+
+if executable('lldb')
+  Bundle 'gilligan/vim-lldb'
 endif
 
 Bundle 'bjoernricks/vim-cmake'
