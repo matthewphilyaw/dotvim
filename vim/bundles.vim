@@ -5,56 +5,56 @@ filetype off
 set rtp+=$HOME/.vim/bundle/vundle
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
+Plugin 'gmarik/vundle'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
 
-Bundle 'flazz/vim-colorschemes'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'kien/rainbow_parentheses.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'kien/rainbow_parentheses.vim'
 
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-dispatch'
-Bundle 'SirVer/ultisnips'
-Bundle 'scrooloose/syntastic'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'rdnetto/YCM-Generator'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-dispatch'
+Plugin 'SirVer/ultisnips'
+Plugin 'scrooloose/syntastic'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
 
 if executable('ack')
-    Bundle 'mileszs/ack.vim'
+  Plugin 'mileszs/ack.vim'
 endif
 
 if executable('ag')
-    Bundle 'rking/ag.vim'
+  Plugin 'rking/ag.vim'
 endif
 
 if executable('ctags')
-    Bundle 'majutsushi/tagbar'
+  Plugin 'majutsushi/tagbar'
 endif
 
 if executable('lldb')
-  Bundle 'gilligan/vim-lldb'
+  Plugin 'gilligan/vim-lldb'
 endif
 
-Bundle 'bjoernricks/vim-cmake'
+Plugin 'bjoernricks/vim-cmake'
 
-Bundle 'leshill/vim-json'
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'leshill/vim-json'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
 
-Bundle 'amirh/HTML-AutoCloseTag'
-Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
-Bundle 'groenewege/vim-less'
+Plugin 'amirh/HTML-AutoCloseTag'
+Plugin 'ChrisYip/Better-CSS-Syntax-for-Vim'
+Plugin 'groenewege/vim-less'
 
-Bundle 'tpope/vim-markdown'
-Bundle 'mustache/vim-mustache-handlebars'
+Plugin 'tpope/vim-markdown'
+Plugin 'mustache/vim-mustache-handlebars'
 
-Bundle 'jimenezrick/vimerl'
-Bundle 'elixir-lang/vim-elixir'
+Plugin 'jimenezrick/vimerl'
+Plugin 'file:///Users/copenhas/code/vim-elixir'
 
 Plugin 'wting/rust.vim'
