@@ -25,7 +25,8 @@ set background=dark
 
     set history=1000
     set tags=./tags;/,~/.vimtags
-    nnoremap <leader>b :make<cr>
+
+    nnoremap <leader>b :Make<cr>
 
 " }
 
@@ -147,3 +148,5 @@ au Syntax * RainbowParenthesesLoadChevrons
 let g:UltiSnipsExpandTrigger='<c-e>'
 let g:UltiSnipsJumpForwardTrigger='<c-j>'
 let g:UltiSnipsJumpBackwardTrigger='<c-k>'
+
+let g:ack_use_dispatch=1

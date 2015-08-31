@@ -4,3 +4,4 @@
 .netrwhist
 vim/bundle/
 *.log
+.DS_Store
