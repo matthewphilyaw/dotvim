@@ -55,6 +55,6 @@ Plugin 'tpope/vim-markdown'
 Plugin 'mustache/vim-mustache-handlebars'
 
 Plugin 'jimenezrick/vimerl'
-Plugin 'file:///Users/copenhas/code/vim-elixir'
+Plugin 'copenhas/vim-elixir'
 
 Plugin 'wting/rust.vim'
