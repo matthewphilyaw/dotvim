@@ -25,7 +25,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 
-if executable('ack')
+if executable('ack') || executable('ack-grep')
   Plugin 'mileszs/ack.vim'
 endif
 
