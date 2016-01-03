@@ -10,16 +10,11 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 
 Plugin 'flazz/vim-colorschemes'
-Plugin 'myusuf3/numbers.vim'
-Plugin 'kien/rainbow_parentheses.vim'
 
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-dispatch'
 Plugin 'SirVer/ultisnips'
-Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
@@ -47,14 +42,10 @@ Plugin 'leshill/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 
-Plugin 'amirh/HTML-AutoCloseTag'
-Plugin 'ChrisYip/Better-CSS-Syntax-for-Vim'
-Plugin 'groenewege/vim-less'
-
 Plugin 'tpope/vim-markdown'
 Plugin 'mustache/vim-mustache-handlebars'
 
 Plugin 'jimenezrick/vimerl'
-Plugin 'copenhas/vim-elixir'
+Plugin 'elixir-lang/vim-elixir'
 
 Plugin 'wting/rust.vim'
