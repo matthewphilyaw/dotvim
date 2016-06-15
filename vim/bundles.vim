@@ -14,7 +14,6 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-dispatch'
-Plugin 'SirVer/ultisnips'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
@@ -37,15 +36,21 @@ if executable('lldb')
 endif
 
 Plugin 'bjoernricks/vim-cmake'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 Plugin 'leshill/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'Valloric/YouCompleteMe'
+"Plugin 'vim-scripts/OmniCppComplete'
 
 Plugin 'tpope/vim-markdown'
 Plugin 'mustache/vim-mustache-handlebars'
 
 Plugin 'jimenezrick/vimerl'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'thinca/vim-ref'
 
 Plugin 'wting/rust.vim'
+Plugin 'ervandew/supertab'

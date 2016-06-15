@@ -1,8 +1,3 @@
-set nocompatible
-
-if has('win32') || has('win64')
-    set runtimepath=$HOME/.vim,$VIMRUNTIME,$HOME/.vim/after
-endif
 
 set background=dark
 
@@ -18,6 +13,7 @@ set background=dark
     autocmd bufwritepost .vimrc source $MYVIMRC
     autocmd bufwritepost vimrc source $MYVIMRC
 
+    set nocp
     filetype on
     filetype plugin on
     filetype indent on
@@ -44,8 +40,9 @@ set background=dark
 
 " Editing {
 
-    set tabstop=2
-    set shiftwidth=2
+    set nowrap
+    set tabstop=4
+    set shiftwidth=4
     set expandtab
     set backspace=indent,eol,start
     set foldmethod=syntax
@@ -63,7 +60,7 @@ set background=dark
 
 
 " Buffers {
-
+    no <bs> <C-w>h
     no <C-h> <C-w>h
     no <C-j> <C-w>j
     no <C-k> <C-w>k
@@ -77,6 +74,7 @@ set background=dark
 " Styling {
 
     syntax enable
+    set background=dark
     colorscheme wombat256i
 
     set showcmd
@@ -84,20 +82,6 @@ set background=dark
     set number
 
     set laststatus=2
-
-    if has('gui_running')
-        set lines=50 columns=95
-    else
-        if &term == 'xterm' || &term == 'screen'
-            set t_Co=256
-        endif
-    endif
-
-    if has("gui_macvim")
-          set guifont=Menlo
-      elseif has("gui_running")
-        set guifont=Consolas
-    endif
 
     set guioptions-=m
     set guioptions-=T
@@ -115,15 +99,29 @@ let NERDTreeIgnore=['\.pyc', '\.beam', '\.o', '\~$', '\.swo$', '\.swp$', '\.git'
 map <leader>c :TagbarOpenAutoClose<cr>
 
 let g:ctrlp_custom_ignore = { 
-    \ 'dir':  'obj$\|build$\|ebin$\|\.git$\|\.hg$\|\.svn$\|deps$\|_build$\|node_modules$\|bower_components$\|vendor$',
+    \ 'dir':  'obj$\|build$\|ebin$\|\.git$\|\.hg$\|\.svn$\|deps$\|_build$\|node_modules$\|bower_components$\|vendor$\|tmp$\|dist$',
     \ 'file': '\.beam$\|\.exe$\|\.so$\|\.dll$\|\.o$' } 
-
-
-let g:UltiSnipsExpandTrigger='<c-e>'
-let g:UltiSnipsJumpForwardTrigger='<c-j>'
-let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 
 let g:ack_use_dispatch=1
 
 let g:airline_powerline_fonts = 1
 let g:ctrlp_show_hidden = 1
+
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
+
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
+set completeopt-=preview
+
+map <LEADER>t :!ctags -R --c++-kinds=+plx --fields=+iaS --extra=+q .<CR>

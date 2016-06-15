@@ -1,0 +1,63 @@
+snippet fh "Doxygen File Header" b
+/**
+ * @file `!p snip.rv = fn`
+ * @author Matthew Philyaw (matthew.philyaw@gmail.com)
+ *
+ * @brief ${1:description}
+ */
+endsnippet
+
+snippet bc "Doxygen brief comment" b
+/**
+ * @brief ${1:description}
+ */
+endsnippet
+
+snippet ic "Doxygen inlince comment"
+/**< ${1:desciption} */
+endsnippet
+
+snippet hg "c header guard" b
+#ifndef __${1:`!p snip.rv = fn.replace(".", "_").upper()`}__
+#define __$1__
+
+$2
+
+#endif /* ifndef $1 */
+endsnippet
+
+snippet main "main() (main)" b
+void main(void)
+{
+	${VISUAL}${0}
+	for (;;) {
+
+	}
+}
+endsnippet
+
+snippet st "struct" b
+typedef struct {
+	${1:/*Field*/}
+} ${0:Foo_TypeDef};
+endsnippet
+
+snippet pt "function prototype" b
+${1:void} ${2:function_name}(${3:/*args*/});
+endsnippet
+
+snippet ft "function impl" b
+${1:void} ${2:function_name}(${3:/*args*/}) {
+	${VISUAL}${0}
+}
+endsnippet
+
+snippet sw "switch" b
+switch(${1:/*arg*/}) {
+	case ${2:/*case*/}:
+		${3:/*expr*/}
+		break;
+	default:
+		${4:/*expr*/}
+}
+endsnippet
